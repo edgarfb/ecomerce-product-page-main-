@@ -25,4 +25,3 @@ export const sliderReducer = (state = initialState, action) => {
       return state;
   }
 };
-export const getName = (state) => state.name;

@@ -3,6 +3,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Slider from "./components/Slider";
 import SneakersDescription from "./components/SneakersDescription";
+import Amount from "./components/Amount";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Navbar />
       <Slider></Slider>
       <SneakersDescription />
+      <Amount />
     </div>
   );
 }
