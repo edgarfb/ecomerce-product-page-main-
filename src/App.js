@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Slider from "./components/Slider";
 import SneakersDescription from "./components/SneakersDescription";
 import Amount from "./components/Amount";
+import AddToCartBtn from "./components/AddToCartBtn";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Slider></Slider>
       <SneakersDescription />
       <Amount />
+      <AddToCartBtn />
     </div>
   );
 }
