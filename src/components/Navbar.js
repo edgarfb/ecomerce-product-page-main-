@@ -1,9 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import userProfileImage from "../images/image-avatar.png";
-import cartIcon from "../images/icon-cart.svg";
 import SvgIcon from "./SvgIcon";
-import menuIcon from "../images/icon-menu.svg";
 import { Icon } from "./Icon";
 import { useSelector, useDispatch } from "react-redux";
 
@@ -11,13 +9,14 @@ const Nav = styled.nav`
   padding: 1rem;
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
 `;
 
 const Brand = styled.h1`
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 700;
   margin: 0;
+  margin-left: 0.5rem;
   display: flex;
   align-items: flex-end;
   &:hover {
@@ -31,20 +30,19 @@ const Box = styled.div`
 `;
 
 function Navbar() {
-  // const menuActived = useSelector((state) => state.menu.active);
   const active = useSelector((state) => state.cart.active);
 
   const dispatch = useDispatch();
   return (
     <Nav>
       <Box>
-        <Icon
-          src={menuIcon}
-          width="20px"
-          height="20px"
-          mgr="1rem"
-          onClick={() => dispatch({ type: "SHOW_MENU" })}
-        ></Icon>
+        <SvgIcon height="16px" onClick={() => dispatch({ type: "SHOW_MENU" })}>
+          <path
+            d="M16 12v3H0v-3h16Zm0-6v3H0V6h16Zm0-6v3H0V0h16Z"
+            fill="#69707D"
+            fill-rule="evenodd"
+          />
+        </SvgIcon>
         <Brand>sneakers</Brand>
       </Box>
       <Box>
