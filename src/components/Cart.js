@@ -24,7 +24,6 @@ const CartEmpty = styled.p`
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
 
-  console.log(cart);
   return (
     <>
       {cart.active && (
