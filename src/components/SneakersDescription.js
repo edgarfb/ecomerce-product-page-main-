@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { COLORS } from "../styles";
+import Amount from "./Amount";
+import AddToCartBtn from "./AddToCartBtn";
+import PriceDisplayer from "./PriceDisplayer";
 
 const Container = styled.div`
   position: relative;
@@ -31,6 +34,10 @@ const SneakersDescription = ({ name, title, description }) => {
         Featuring a durable rubber outer sole, they’ll withstand everything the
         weather can offer.
       </Description>
+
+      <PriceDisplayer />
+      <Amount />
+      <AddToCartBtn />
     </Container>
   );
 };
