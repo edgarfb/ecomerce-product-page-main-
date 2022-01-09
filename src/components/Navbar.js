@@ -4,6 +4,7 @@ import userProfileImage from "../images/image-avatar.png";
 import cartIcon from "../images/icon-cart.svg";
 import menuIcon from "../images/icon-menu.svg";
 import { Icon } from "./Icon";
+import { useSelector, useDispatch } from "react-redux";
 
 const Nav = styled.nav`
   padding: 1rem;
@@ -29,6 +30,7 @@ const Box = styled.div`
 `;
 
 function Navbar() {
+  const dispatch = useDispatch();
   return (
     <Nav>
       <Box>
@@ -36,7 +38,10 @@ function Navbar() {
         <Brand>sneakers</Brand>
       </Box>
       <Box>
-        <Icon src={cartIcon}></Icon>
+        <Icon
+          src={cartIcon}
+          onClick={() => dispatch({ type: "TOGGLE_CART" })}
+        ></Icon>
         <Icon src={userProfileImage} mgl="1rem"></Icon>
       </Box>
     </Nav>

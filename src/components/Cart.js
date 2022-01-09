@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { useSelector } from "react-redux";
 
 const CartContainer = styled.div`
   position: absolute;
@@ -21,11 +22,18 @@ const CartEmpty = styled.p`
 `;
 
 const Cart = () => {
+  const cart = useSelector((state) => state.cart);
+
+  console.log(cart);
   return (
-    <CartContainer>
-      <CartTitle>Cart</CartTitle>
-      <CartEmpty>Your cart is empty</CartEmpty>
-    </CartContainer>
+    <>
+      {cart.active && (
+        <CartContainer>
+          <CartTitle>Cart</CartTitle>
+          <CartEmpty>Your cart is empty</CartEmpty>
+        </CartContainer>
+      )}
+    </>
   );
 };
 
