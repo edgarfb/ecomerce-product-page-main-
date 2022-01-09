@@ -7,6 +7,17 @@ body {
   font-family: "Kumbh Sans", sans-serif;
 }
 
+:root {
+  --black: #000;
+  --white: #fff;
+  --very-dark-blue: hsl(220, 13%, 13%);
+  --gray: hsl(219, 9%, 45%);
+  --gray-blue: hsl(220, 14%, 75%);
+  --light-gray-blue: hsl(223, 64%, 98%);
+  --orange: hsl(26, 100%, 55%);
+  --orange-pale: hsl(25, 100%, 94%);
+}
+
 /* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
