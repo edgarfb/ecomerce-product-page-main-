@@ -1,3 +1,7 @@
+html {
+  box-sizing: border-box !important;
+}
+
 body {
   margin: 0;
   font-family: "Kumbh Sans", sans-serif;
