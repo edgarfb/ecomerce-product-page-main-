@@ -7,10 +7,12 @@ import Amount from "./components/Amount";
 import AddToCartBtn from "./components/AddToCartBtn";
 import PriceDisplayer from "./components/PriceDisplayer";
 import Cart from "./components/Cart";
+import MobileMenu from "./components/MobileMenu";
 
 function App() {
   return (
     <div className="App">
+      <MobileMenu />
       <Navbar />
       <Slider></Slider>
       <Cart />
