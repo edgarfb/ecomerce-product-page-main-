@@ -5,12 +5,11 @@ import { Icon } from "./Icon";
 import previousArrow from "../images/icon-previous.svg";
 import nextArrow from "../images/icon-next.svg";
 
-const ImgBox = styled.div`
+const SliderContainer = styled.div`
   position: relative;
-  min-width: 300px;
-  max-width: 400px;
   width: 100%;
-  height: 400px;
+  max-width: 500px;
+  height: 350px;
 `;
 
 const Next = styled.button`
@@ -23,8 +22,12 @@ const Next = styled.button`
   border-radius: 50%;
   border: 1px solid gray;
   padding: 10px;
-  top: 45%;
+  top: 50%;
+  transform: translateY(-50%);
   right: 1rem;
+  &: hover {
+    cursor: pointer;
+  }
 `;
 const Prev = styled(Next)`
   left: 1rem;
@@ -32,6 +35,8 @@ const Prev = styled(Next)`
 
 const Img = styled.img`
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 `;
 
 function Slider() {
@@ -40,17 +45,15 @@ function Slider() {
   const dispatch = useDispatch();
 
   return (
-    <div>
-      <ImgBox>
-        <Img src={images[index]} alt="slider" />
-        <Prev onClick={() => dispatch({ type: "PREV" })}>
-          <Icon src={previousArrow} width="15px" height="15px" />
-        </Prev>
-        <Next onClick={() => dispatch({ type: "NEXT" })}>
-          <Icon src={nextArrow} width="15px" height="15px" />
-        </Next>
-      </ImgBox>
-    </div>
+    <SliderContainer>
+      <Img src={images[index]} alt="slider" />
+      <Prev onClick={() => dispatch({ type: "PREV" })}>
+        <Icon src={previousArrow} width="10px" height="15px" />
+      </Prev>
+      <Next onClick={() => dispatch({ type: "NEXT" })}>
+        <Icon src={nextArrow} width="10px" height="15px" />
+      </Next>
+    </SliderContainer>
   );
 }
 
