@@ -20,7 +20,24 @@ const MobileMenuContainer = styled.div`
   background-color: white;
   z-index: 20;
   box-sizing: border-box;
-  padding: 2rem;
+  padding: 2rem 1.5rem;
+`;
+const Ul = styled.ul`
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+`;
+const ListItem = styled.li`
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  &:first-child {
+    margin-top: 2rem;
+  }
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 const MobileMenu = () => {
@@ -32,9 +49,16 @@ const MobileMenu = () => {
         <SvgIcon onClick={() => dispatch({ type: "HIDE_MENU" })}>
           <path
             d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
-            fill-rule="evenodd"
+            fillRule="evenodd"
           />
         </SvgIcon>
+        <Ul>
+          <ListItem>Collections</ListItem>
+          <ListItem>Men</ListItem>
+          <ListItem>Women</ListItem>
+          <ListItem>About</ListItem>
+          <ListItem>Contact</ListItem>
+        </Ul>
       </MobileMenuContainer>
     </>
   );
