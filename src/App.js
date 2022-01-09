@@ -6,12 +6,14 @@ import SneakersDescription from "./components/SneakersDescription";
 import Amount from "./components/Amount";
 import AddToCartBtn from "./components/AddToCartBtn";
 import PriceDisplayer from "./components/PriceDisplayer";
+import Cart from "./components/Cart";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
       <Slider></Slider>
+      <Cart />
       <SneakersDescription />
       <PriceDisplayer />
       <Amount />
