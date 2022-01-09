@@ -31,13 +31,20 @@ const Box = styled.div`
 `;
 
 function Navbar() {
+  // const menuActived = useSelector((state) => state.menu.active);
   const active = useSelector((state) => state.cart.active);
 
   const dispatch = useDispatch();
   return (
     <Nav>
       <Box>
-        <Icon src={menuIcon} width="20px" height="20px" mgr="1rem"></Icon>
+        <Icon
+          src={menuIcon}
+          width="20px"
+          height="20px"
+          mgr="1rem"
+          onClick={() => dispatch({ type: "SHOW_MENU" })}
+        ></Icon>
         <Brand>sneakers</Brand>
       </Box>
       <Box>

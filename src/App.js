@@ -8,11 +8,13 @@ import AddToCartBtn from "./components/AddToCartBtn";
 import PriceDisplayer from "./components/PriceDisplayer";
 import Cart from "./components/Cart";
 import MobileMenu from "./components/MobileMenu";
+import { useSelector, useDispatch } from "react-redux";
 
 function App() {
+  const menuActived = useSelector((state) => state.menu.active);
   return (
     <div className="App">
-      <MobileMenu />
+      {menuActived && <MobileMenu />}
       <Navbar />
       <Slider></Slider>
       <Cart />
