@@ -3,6 +3,7 @@ import { sliderReducer } from "./slider";
 import { amountReducer } from "./amount";
 import { cartReducer } from "./cart";
 import { menuReducer } from "./menu";
+import { productsReducer } from "./products";
 
 export const store = createStore(
   combineReducers({
@@ -10,5 +11,6 @@ export const store = createStore(
     amount: amountReducer,
     cart: cartReducer,
     menu: menuReducer,
+    products: productsReducer,
   })
 );

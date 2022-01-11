@@ -24,18 +24,14 @@ const Description = styled.p`
   font-size: 0.9rem;
 `;
 
-const SneakersDescription = ({ name, title, description }) => {
+const SneakersDescription = ({ name, description, price, discount }) => {
   return (
     <Container>
       <Name>The companie´s name</Name>
-      <Title>Fall Limited Edition Sneakers</Title>
-      <Description>
-        These low-profile sneakers are your perfect casual wear companion.
-        Featuring a durable rubber outer sole, they’ll withstand everything the
-        weather can offer.
-      </Description>
+      <Title>{name}</Title>
+      <Description>{description}</Description>
 
-      <PriceDisplayer />
+      <PriceDisplayer price={price} discount={discount} />
       <Amount />
       <AddToCartBtn />
     </Container>

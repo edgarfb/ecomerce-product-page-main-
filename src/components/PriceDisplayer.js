@@ -31,15 +31,16 @@ const Discount = styled.div`
 `;
 
 // TODO: maybe the price should be getting from props?
-const PriceDisplayer = () => {
+const PriceDisplayer = ({ price, discount = 0 }) => {
+  const finalPrice = price - (price * discount) / 100;
   return (
     <PriceContainer>
       <PriceWithDiscount>
-        $125.00
-        <Discount>50%</Discount>
+        ${finalPrice.toFixed(2)}
+        <Discount>{discount}%</Discount>
       </PriceWithDiscount>
 
-      <Price>$250.00</Price>
+      <Price>${price.toFixed(2)}</Price>
     </PriceContainer>
   );
 };
