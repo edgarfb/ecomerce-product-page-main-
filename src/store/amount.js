@@ -8,7 +8,7 @@ export const amountReducer = (state = initialState, action) => {
       if (state.amount <= 1) {
         return { ...state, isBtnActived: false, amount: 0 };
       } else {
-        return { ...state, amount: state.amount - 1 };
+        return { ...state, isBtnActived: true, amount: state.amount - 1 };
       }
     case "PLUS":
       return { ...state, amount: state.amount + 1, isBtnActived: true };

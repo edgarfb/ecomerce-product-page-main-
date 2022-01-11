@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import SvgIcon from "./SvgIcon";
 import { COLORS } from "../styles";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { products } from "../store/products";
 
 const Btn = styled.button`
   width: 100%;
@@ -23,11 +24,17 @@ const Btn = styled.button`
 
 const AddToCartBtn = () => {
   const isBtnActived = useSelector((state) => state.amount.isBtnActived);
+  const products = useSelector((state) => state.products);
+  const amount = useSelector((state) => state.amount.amount);
+  const dispatch = useDispatch();
+  console.log(amount);
   return (
     <Btn
-      disabled={isBtnActived}
+      disabled={!isBtnActived}
       isBtnActived={isBtnActived}
-      onClick={() => console.log("hi")}
+      onClick={() =>
+        dispatch({ type: "ADD_ITEM", payload: { ...products, amount } })
+      }
     >
       <SvgIcon fill="white" style={{ marginRight: "1rem" }}>
         <path

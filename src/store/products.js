@@ -12,7 +12,7 @@ export const productsReducer = (state = initialState, action) => {
     case "ADD_PRODUCT":
       return {
         ...state,
-        stock: state.stock - state.payload,
+        stock: state.stock - action.payload,
       };
     default:
       return state;

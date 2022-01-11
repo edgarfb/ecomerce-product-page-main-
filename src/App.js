@@ -11,6 +11,10 @@ import { useSelector } from "react-redux";
 function App() {
   const menuActived = useSelector((state) => state.menu.active);
   const products = useSelector((state) => state.products);
+  const item = useSelector((state) => state.cart.item);
+
+  console.log("products", products);
+  console.log("item", item);
   return (
     <div className="App">
       {menuActived && <MobileMenu />}
