@@ -10,6 +10,8 @@ export const cartReducer = (state = initialState, action) => {
       return { ...state, active: !state.active };
     case "ADD_ITEM":
       return { ...state, item: action.payload };
+    case "REMOVE_ITEM":
+      return { ...state, item: {} };
     default:
       return state;
   }
