@@ -10,6 +10,10 @@ const SliderContainer = styled.div`
   width: 100%;
   max-width: 500px;
   height: 350px;
+  @media (min-width: 500px) {
+    height: 400px;
+    max-width: 800px;
+  }
 `;
 
 const Next = styled.button`
@@ -37,6 +41,9 @@ const Img = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+  @media (min-width: 500px) {
+    object-fit: contain;
+  }
 `;
 
 function Slider() {
