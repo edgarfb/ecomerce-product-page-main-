@@ -8,6 +8,9 @@ import PriceDisplayer from "./PriceDisplayer";
 const Container = styled.div`
   position: relative;
   padding: 1.5rem;
+  @media (min-width: 768px) {
+    width: 50%;
+  }
 `;
 
 const Name = styled.h2`

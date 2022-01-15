@@ -14,6 +14,9 @@ const SliderContainer = styled.div`
     height: 400px;
     max-width: 800px;
   }
+  @media (min-width: 768px) {
+    display: none;
+  }
 `;
 
 const Next = styled.button`

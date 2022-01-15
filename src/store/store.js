@@ -4,6 +4,7 @@ import { amountReducer } from "./amount";
 import { cartReducer } from "./cart";
 import { menuReducer } from "./menu";
 import { productsReducer } from "./products";
+import { selcetedGalleryReducer } from "./selectedGallery";
 
 export const store = createStore(
   combineReducers({
@@ -12,5 +13,6 @@ export const store = createStore(
     cart: cartReducer,
     menu: menuReducer,
     products: productsReducer,
+    selectedGallery: selcetedGalleryReducer,
   })
 );
