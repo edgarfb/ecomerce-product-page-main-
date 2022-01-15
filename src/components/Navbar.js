@@ -3,13 +3,23 @@ import styled from "styled-components";
 import userProfileImage from "../images/image-avatar.png";
 import SvgIcon from "./SvgIcon";
 import { Icon } from "./Icon";
+import { COLORS, SIZES } from "../styles";
 import { useSelector, useDispatch } from "react-redux";
+import logo from "../images/logo.svg";
+
+import { Ul } from "./Ul";
+import { ListItem } from "./ListItem";
 
 const Nav = styled.nav`
   padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (min-width: 768px) {
+    width: 80%;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+  }
 `;
 
 const Brand = styled.h1`
@@ -27,8 +37,36 @@ const Brand = styled.h1`
 const Box = styled.div`
   display: flex;
   align-items: baseline;
+  @media (min-width: 768px) {
+    align-items: center;
+  }
 `;
 
+const MenuIcon = styled.div`
+  @media (min-width: 768px) {
+    display: none;
+  }
+`;
+const NavbarUl = styled(Ul)`
+  display: none;
+  align-items: center;
+  @media (min-width: 768px) {
+    display: flex;
+  }
+`;
+const NavbarList = styled(ListItem)`
+  color: ${COLORS.gray};
+  margin: 0 !important;
+  margin-left: 2rem !important;
+  font-weight: 400;
+`;
+
+const ProfileImage = styled(Icon)`
+  @media (min-width: 768px) {
+    width: 50px !important;
+    height: 50px !important;
+  }
+`;
 function Navbar() {
   const active = useSelector((state) => state.cart.active);
 
@@ -36,14 +74,29 @@ function Navbar() {
   return (
     <Nav>
       <Box>
-        <SvgIcon height="16px" onClick={() => dispatch({ type: "SHOW_MENU" })}>
-          <path
-            d="M16 12v3H0v-3h16Zm0-6v3H0V6h16Zm0-6v3H0V0h16Z"
-            fill="#69707D"
-            fill-rule="evenodd"
-          />
-        </SvgIcon>
-        <Brand>sneakers</Brand>
+        <MenuIcon>
+          <SvgIcon
+            height="16px"
+            onClick={() => dispatch({ type: "SHOW_MENU" })}
+          >
+            <path
+              d="M16 12v3H0v-3h16Zm0-6v3H0V6h16Zm0-6v3H0V0h16Z"
+              fill="#69707D"
+              fill-rule="evenodd"
+            />
+          </SvgIcon>
+        </MenuIcon>
+        <Brand>
+          <img src={logo} alt="" />
+        </Brand>
+
+        <NavbarUl>
+          <NavbarList>Collections</NavbarList>
+          <NavbarList>Men</NavbarList>
+          <NavbarList>Women</NavbarList>
+          <NavbarList>About</NavbarList>
+          <NavbarList>Contact</NavbarList>
+        </NavbarUl>
       </Box>
       <Box>
         <SvgIcon
@@ -56,7 +109,7 @@ function Navbar() {
           />
         </SvgIcon>
 
-        <Icon src={userProfileImage} mgl="1rem"></Icon>
+        <ProfileImage src={userProfileImage} mgl="1rem"></ProfileImage>
       </Box>
     </Nav>
   );
