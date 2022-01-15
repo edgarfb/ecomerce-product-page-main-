@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import SvgIcon from "./SvgIcon";
 import { useSelector, useDispatch } from "react-redux";
+import { Ul } from "./Ul";
+import { ListItem } from "./ListItem";
 
 const BackDrop = styled.div`
   position: fixed;
@@ -21,23 +23,6 @@ const MobileMenuContainer = styled.div`
   z-index: 20;
   box-sizing: border-box;
   padding: 2rem 1.5rem;
-`;
-const Ul = styled.ul`
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-`;
-const ListItem = styled.li`
-  color: black;
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin: 1rem 0;
-  &:first-child {
-    margin-top: 2rem;
-  }
-  &:hover {
-    cursor: pointer;
-  }
 `;
 
 const MobileMenu = () => {
