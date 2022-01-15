@@ -5,24 +5,26 @@ import { useSelector, useDispatch } from "react-redux";
 const Wrapper = styled.div`
   width: 50%;
   padding: 2rem;
-  height: 500px;
-  background-color: red;
+  // height: 500px;
+  // background-color: red;
 `;
 
 const MainImage = styled.img`
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  border-radius: 1rem;
 `;
 
 const ImagesSelectorBox = styled.div`
   display: flex;
+  gap: 1rem;
   justify-content: space-between;
+  margin-top: 1rem;
 `;
 const ImagesSelector = styled.img`
-  width: 50px;
-  height: 50px;
+  width: calc((100% - 3rem) / 4);
+
   background-color: blue;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
 `;
 
 const SelectedGallery = () => {
