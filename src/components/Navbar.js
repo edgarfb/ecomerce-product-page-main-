@@ -74,6 +74,12 @@ const ProfileImage = styled(Icon)`
   @media (min-width: 768px) {
     width: 50px !important;
     height: 50px !important;
+    transition: all 0.3s ease;
+    outline: 0 solid ${COLORS.orange};
+    border-radius: 50%;
+    &:hover {
+      outline: 1px solid ${COLORS.orange};
+    }
   }
 `;
 
