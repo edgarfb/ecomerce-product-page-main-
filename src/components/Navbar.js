@@ -85,6 +85,10 @@ const Amount = styled.span`
   width: 1rem;
   height: 1rem;
   padding: 0 0.1rem;
+  @media (min-width: 768px) {
+    top: 7px;
+    right: 60px;
+  }
 `;
 function Navbar() {
   const active = useSelector((state) => state.cart.active);
