@@ -7,6 +7,10 @@ const PriceContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 2rem 0;
+  @media (min-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
 const Price = styled.div`
