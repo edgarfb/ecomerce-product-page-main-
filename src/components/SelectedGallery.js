@@ -3,8 +3,12 @@ import styled from "styled-components";
 import { useSelector, useDispatch } from "react-redux";
 
 const Wrapper = styled.div`
+  display: none;
   width: 50%;
   padding: 2rem;
+  @media (min-width: 768px) {
+    display: block;
+  }
 `;
 
 const MainImage = styled.img`
