@@ -5,8 +5,6 @@ import { useSelector, useDispatch } from "react-redux";
 const Wrapper = styled.div`
   width: 50%;
   padding: 2rem;
-  // height: 500px;
-  // background-color: red;
 `;
 
 const MainImage = styled.img`
@@ -25,16 +23,18 @@ const ImagesSelector = styled.img`
 
   background-color: blue;
   border-radius: 0.5rem;
+  border: ${(props) => (props.actived === true ? "1px solid red" : "")};
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 const SelectedGallery = () => {
   const bigImages = useSelector((state) => state.slider.images);
-  console.log(bigImages);
   const currentImage = useSelector(
     (state) => state.selectedGallery.currentImage
   );
   const images = useSelector((state) => state.selectedGallery.images);
-  console.log("currentImage", images);
   const dispatch = useDispatch();
   return (
     <Wrapper>
@@ -43,12 +43,11 @@ const SelectedGallery = () => {
         {images.map((image, index) => {
           return (
             <ImagesSelector
-              onClick={
-                // () => console.log(index)
-                () =>
-                  dispatch({ type: "SELECT_IMAGE", payload: bigImages[index] })
-              }
-              src={image.src}
+              onClick={(e) => {
+                dispatch({ type: "SELECT_IMAGE", payload: bigImages[index] });
+              }}
+              src={image}
+              key={image}
             ></ImagesSelector>
           );
         })}
