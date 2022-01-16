@@ -92,7 +92,7 @@ const Amount = styled.span`
 `;
 function Navbar() {
   const active = useSelector((state) => state.cart.active);
-  const amount = useSelector((state) => state.amount.amount);
+  const cartAmount = useSelector((state) => state.cart.item.amount);
 
   const dispatch = useDispatch();
   return (
@@ -132,7 +132,7 @@ function Navbar() {
             fillRule="nonzero"
           />
         </SvgIcon>
-        <Amount amount={amount}>{amount}</Amount>
+        <Amount amount={cartAmount}>{cartAmount}</Amount>
         <ProfileImage src={userProfileImage} mgl="1rem"></ProfileImage>
       </Box>
       <Cart />

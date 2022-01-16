@@ -27,7 +27,6 @@ const AddToCartBtn = () => {
   const products = useSelector((state) => state.products);
   const amount = useSelector((state) => state.amount.amount);
   const dispatch = useDispatch();
-  console.log(amount);
   const finalPrice = () => {
     let finalPrice =
       products.price - products.price * (products.discount / 100);
@@ -42,6 +41,7 @@ const AddToCartBtn = () => {
           type: "ADD_ITEM",
           payload: { ...products, amount, finalPrice: finalPrice() },
         });
+        dispatch({ type: "RESET_AMOUNT" });
       }}
     >
       <SvgIcon fill="white" style={{ marginRight: "1rem" }}>

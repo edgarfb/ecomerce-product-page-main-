@@ -17,7 +17,7 @@ const CartContainer = styled.div`
   box-sizing: border-box;
   box-shadow: 0px 2px 25px 1px ${COLORS.grayBlue};
   z-index: 100;
-  @media (min-width: 768px) {
+  @media (min-width: 500px) {
     width: 375px;
     margin: 0;
     right: 0;
@@ -96,7 +96,7 @@ const ProductCartDetailsBtn = styled.button`
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
   const cartItems = useSelector((state) => state.cart.item);
-  const amount = useSelector((state) => state.amount.amount);
+  const amount = cartItems.amount;
   const dispatch = useDispatch();
   console.log("item", cartItems);
   return (
