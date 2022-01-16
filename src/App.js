@@ -10,9 +10,11 @@ import MobileMenu from "./components/MobileMenu";
 import { useSelector } from "react-redux";
 
 const WrapperDesktop = styled.div`
-  display: flex;
-  width: 70%;
-  margin: 3rem auto;
+  @media (min-width: 768px) {
+    display: flex;
+    width: 70%;
+    margin: 3rem auto;
+  }
 `;
 
 function App() {
