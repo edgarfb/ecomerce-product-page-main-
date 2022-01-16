@@ -22,6 +22,8 @@ const Btn = styled.button`
   }
   @media (min-width: 768px) {
     width: 60%;
+    margin-top: 0;
+    height: 4rem;
   }
 `;
 

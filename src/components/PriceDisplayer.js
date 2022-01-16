@@ -10,6 +10,7 @@ const PriceContainer = styled.div`
   @media (min-width: 768px) {
     flex-direction: column;
     align-items: flex-start;
+    height: 4rem;
   }
 `;
 

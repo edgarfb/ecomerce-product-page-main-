@@ -20,6 +20,7 @@ const Nav = styled.nav`
   @media (min-width: 768px) {
     width: 80%;
     margin: 0 auto;
+    padding: 0;
   }
 `;
 
@@ -61,10 +62,10 @@ const NavbarList = styled(ListItem)`
   margin: 0 !important;
   margin-left: 2rem !important;
   font-weight: 400;
-  padding: 1.5rem 0;
+  padding: 2rem 0;
 
   &:hover {
-    padding-bottom: calc(1.5rem - 3px);
+    padding-bottom: calc(2rem - 3px);
     border-bottom: 3px solid ${COLORS.orange};
   }
 `;

@@ -41,6 +41,7 @@ const Description = styled.p`
 const WrapperForDesktop = styled.div`
   @media (min-width: 768px) {
     display: flex;
+    gap: 1.5rem;
     align-items: center;
     justify-content: space-between;
   }
