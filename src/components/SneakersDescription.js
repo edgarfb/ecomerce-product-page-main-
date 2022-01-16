@@ -17,14 +17,25 @@ const Name = styled.h2`
   color: ${COLORS.orange};
   text-transform: uppercase;
   font-size: 0.8rem;
+  margin-bottom: 0;
+  @media (min-width: 768px) {
+    font-size: 1rem;
+  }
 `;
 
-const Title = styled.h1``;
+const Title = styled.h1`
+  @media (min-width: 768px) {
+    font-size: 3rem;
+  }
+`;
 
 const Description = styled.p`
   color: ${COLORS.gray};
   line-height: 1.5;
   font-size: 0.9rem;
+  @media (min-width: 768px) {
+    font-size: 1rem;
+  }
 `;
 
 const WrapperForDesktop = styled.div`
