@@ -12,6 +12,9 @@ const BackDrop = styled.div`
   background-color: black;
   opacity: 0.5;
   z-index: 10;
+  @media (min-width: 768px) {
+    display: none;
+  }
 `;
 
 const MobileMenuContainer = styled.div`
@@ -23,6 +26,9 @@ const MobileMenuContainer = styled.div`
   z-index: 20;
   box-sizing: border-box;
   padding: 2rem 1.5rem;
+  @media (min-width: 768px) {
+    display: none;
+  }
 `;
 
 const MobileMenu = () => {
