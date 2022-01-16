@@ -12,7 +12,8 @@ export const amountReducer = (state = initialState, action) => {
       }
     case "PLUS":
       return { ...state, amount: state.amount + 1, isBtnActived: true };
-
+    case "RESET_AMOUNT":
+      return { ...state, amount: 0, isBtnActived: false };
     default:
       return state;
   }
