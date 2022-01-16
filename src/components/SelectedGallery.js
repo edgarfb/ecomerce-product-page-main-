@@ -25,11 +25,12 @@ const ImagesSelectorBox = styled.div`
 const ImagesSelector = styled.img`
   width: calc((100% - 3rem) / 4);
 
-  background-color: blue;
   border-radius: 0.5rem;
   border: ${(props) => (props.actived === true ? "1px solid red" : "")};
+  transition: opacity 0.2s;
   &:hover {
     cursor: pointer;
+    opacity: 0.7;
   }
 `;
 

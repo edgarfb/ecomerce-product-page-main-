@@ -63,7 +63,7 @@ const NavbarList = styled(ListItem)`
   margin-left: 2rem !important;
   font-weight: 400;
   padding: 2rem 0;
-
+  transition: border-bottom 0.1s ease-out;
   &:hover {
     padding-bottom: calc(2rem - 3px);
     border-bottom: 3px solid ${COLORS.orange};
