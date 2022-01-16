@@ -19,9 +19,10 @@ const CartContainer = styled.div`
   z-index: 100;
   @media (min-width: 768px) {
     width: 375px;
-    margin: 1.5rem;
-    right: 5%;
+    margin: 0;
+    right: 0;
     left: auto;
+    top: 99px;
   }
 `;
 

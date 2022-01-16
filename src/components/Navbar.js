@@ -6,7 +6,7 @@ import { Icon } from "./Icon";
 import { COLORS, SIZES } from "../styles";
 import { useSelector, useDispatch } from "react-redux";
 import logo from "../images/logo.svg";
-
+import Cart from "./Cart";
 import { Ul } from "./Ul";
 import { ListItem } from "./ListItem";
 
@@ -15,6 +15,7 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
   @media (min-width: 768px) {
     width: 80%;
     margin: 0 auto;
@@ -111,6 +112,7 @@ function Navbar() {
 
         <ProfileImage src={userProfileImage} mgl="1rem"></ProfileImage>
       </Box>
+      <Cart />
     </Nav>
   );
 }

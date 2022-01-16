@@ -6,7 +6,6 @@ import Slider from "./components/Slider";
 import SneakersDescription from "./components/SneakersDescription";
 import SelectedGallery from "./components/SelectedGallery";
 
-import Cart from "./components/Cart";
 import MobileMenu from "./components/MobileMenu";
 import { useSelector } from "react-redux";
 
@@ -26,9 +25,8 @@ function App() {
   return (
     <div className="App">
       {menuActived && <MobileMenu />}
-      <Navbar />
+      <Navbar></Navbar>
       <Slider></Slider>
-      <Cart />
       <WrapperDesktop>
         <SelectedGallery></SelectedGallery>
         <SneakersDescription
