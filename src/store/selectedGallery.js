@@ -6,18 +6,16 @@ import thumbnail4 from "../images/image-product-4-thumbnail.jpg";
 
 const initialState = {
   currentImage: firstImage,
-  images: [
-    { src: thumbnail1, active: true },
-    { src: thumbnail2, active: false },
-    { src: thumbnail3, active: false },
-    { src: thumbnail4, active: false },
-  ],
+  images: [thumbnail1, thumbnail2, thumbnail3, thumbnail4],
 };
 
 export const selcetedGalleryReducer = (state = initialState, action) => {
   switch (action.type) {
     case "SELECT_IMAGE":
-      return { ...state, currentImage: action.payload };
+      return {
+        ...state,
+        currentImage: action.payload,
+      };
     default:
       return state;
   }
