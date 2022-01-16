@@ -15,13 +15,22 @@ const CartContainer = styled.div`
   border-radius: 10px;
   margin: 0.5rem;
   box-sizing: border-box;
+  box-shadow: 0px 2px 25px 1px ${COLORS.grayBlue};
+  z-index: 100;
+  @media (min-width: 768px) {
+    width: 375px;
+    margin: 0;
+    right: 0;
+    left: auto;
+    top: 99px;
+  }
 `;
 
 const CartTitle = styled.h3`
   font-weight: bold;
   margin: 0;
   padding: 1.5rem;
-  border-bottom: 1px solid ${COLORS.lightGrayBlue};
+  border-bottom: 1px solid ${COLORS.grayBlue};
 `;
 const CartContent = styled.div`
   display: flex;
