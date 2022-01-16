@@ -16,10 +16,10 @@ const Nav = styled.nav`
   justify-content: space-between;
   align-items: center;
   position: relative;
+  border-bottom: 1px solid ${COLORS.grayBlue};
   @media (min-width: 768px) {
     width: 80%;
     margin: 0 auto;
-    padding: 1.5rem 0;
   }
 `;
 
@@ -61,6 +61,12 @@ const NavbarList = styled(ListItem)`
   margin: 0 !important;
   margin-left: 2rem !important;
   font-weight: 400;
+  padding: 1.5rem 0;
+
+  &:hover {
+    padding-bottom: calc(1.5rem - 3px);
+    border-bottom: 3px solid ${COLORS.orange};
+  }
 `;
 
 const ProfileImage = styled(Icon)`
