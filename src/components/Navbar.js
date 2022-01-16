@@ -38,6 +38,7 @@ const Brand = styled.h1`
 const Box = styled.div`
   display: flex;
   align-items: baseline;
+  position: relative;
   @media (min-width: 768px) {
     align-items: center;
   }
@@ -68,8 +69,30 @@ const ProfileImage = styled(Icon)`
     height: 50px !important;
   }
 `;
+
+const Amount = styled.span`
+  position: absolute;
+  display: ${(props) => (props.amount > 0 ? "flex" : "none")};
+  align-items: center;
+  justify-content: center;
+  top: -5px;
+  right: 30px;
+  background: ${COLORS.orange};
+  font-size: 0.6rem;
+  text-align: center;
+  color: white;
+  border-radius: 35%;
+  width: 1rem;
+  height: 1rem;
+  padding: 0 0.1rem;
+  @media (min-width: 768px) {
+    top: 7px;
+    right: 60px;
+  }
+`;
 function Navbar() {
   const active = useSelector((state) => state.cart.active);
+  const amount = useSelector((state) => state.amount.amount);
 
   const dispatch = useDispatch();
   return (
@@ -109,7 +132,7 @@ function Navbar() {
             fillRule="nonzero"
           />
         </SvgIcon>
-
+        <Amount amount={amount}>{amount}</Amount>
         <ProfileImage src={userProfileImage} mgl="1rem"></ProfileImage>
       </Box>
       <Cart />
