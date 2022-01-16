@@ -20,6 +20,9 @@ const Btn = styled.button`
   &:hover {
     cursor: pointer;
   }
+  @media (min-width: 768px) {
+    width: 60%;
+  }
 `;
 
 const AddToCartBtn = () => {

@@ -27,6 +27,14 @@ const Description = styled.p`
   font-size: 0.9rem;
 `;
 
+const WrapperForDesktop = styled.div`
+  @media (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+`;
+
 const SneakersDescription = ({ name, description, price, discount }) => {
   return (
     <Container>
@@ -35,8 +43,10 @@ const SneakersDescription = ({ name, description, price, discount }) => {
       <Description>{description}</Description>
 
       <PriceDisplayer price={price} discount={discount} />
-      <Amount />
-      <AddToCartBtn />
+      <WrapperForDesktop>
+        <Amount />
+        <AddToCartBtn />
+      </WrapperForDesktop>
     </Container>
   );
 };

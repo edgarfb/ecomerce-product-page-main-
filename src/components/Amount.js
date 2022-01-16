@@ -12,6 +12,9 @@ const Container = styled.div`
   border-radius: 0.5rem;
   font-weight: 700;
   font-size: 1.2rem;
+  @media (min-width: 768px) {
+    width: 40%;
+  }
 `;
 
 const Btn = styled.button`
