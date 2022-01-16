@@ -30,7 +30,7 @@ const Description = styled.p`
 const SneakersDescription = ({ name, description, price, discount }) => {
   return (
     <Container>
-      <Name>The companie´s name</Name>
+      <Name>Sneakers Company</Name>
       <Title>{name}</Title>
       <Description>{description}</Description>
 
