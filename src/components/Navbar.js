@@ -124,7 +124,7 @@ function Navbar() {
           </SvgIcon>
         </MenuIcon>
         <Brand>
-          <img src={logo} alt="" />
+          <img src={logo} alt="logo" />
         </Brand>
 
         <NavbarUl>

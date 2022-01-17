@@ -109,7 +109,10 @@ const Cart = () => {
             {cartItems.name && (
               <CartFilled>
                 <ProductCartConatiner>
-                  <ProductCartDetailsImg src={sneakerTumbl} alt="" />
+                  <ProductCartDetailsImg
+                    src={sneakerTumbl}
+                    alt="sneakers tumbl"
+                  />
                   <ProductCartDetails>
                     <h4>{cartItems.name}</h4>
                     <p>

@@ -58,10 +58,10 @@ function Slider() {
     <SliderContainer>
       <Img src={images[index]} alt="slider" />
       <Prev onClick={() => dispatch({ type: "PREV" })}>
-        <Icon src={previousArrow} width="10px" height="15px" />
+        <Icon src={previousArrow} alt="arrow left" width="10px" height="15px" />
       </Prev>
       <Next onClick={() => dispatch({ type: "NEXT" })}>
-        <Icon src={nextArrow} width="10px" height="15px" />
+        <Icon src={nextArrow} alt="arrow right" width="10px" height="15px" />
       </Next>
     </SliderContainer>
   );
