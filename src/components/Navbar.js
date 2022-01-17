@@ -24,7 +24,7 @@ const Nav = styled.nav`
   }
 `;
 
-const Brand = styled.h1`
+const Brand = styled.div`
   font-size: 2.2rem;
   font-weight: 700;
   margin: 0;

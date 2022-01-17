@@ -43,7 +43,7 @@ const SelectedGallery = () => {
   const dispatch = useDispatch();
   return (
     <Wrapper>
-      <MainImage src={currentImage}></MainImage>
+      <MainImage src={currentImage} alt="sneakers"></MainImage>
       <ImagesSelectorBox>
         {images.map((image, index) => {
           return (
@@ -52,6 +52,7 @@ const SelectedGallery = () => {
                 dispatch({ type: "SELECT_IMAGE", payload: bigImages[index] });
               }}
               src={image}
+              alt="sneakers"
               key={image}
             ></ImagesSelector>
           );
