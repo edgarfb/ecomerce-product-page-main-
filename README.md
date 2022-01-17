@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# Frontend Mentor - E-commerce product page
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Welcome! 👋
 
-## Available Scripts
+Thanks for checking out this front-end coding challenge.
 
-In the project directory, you can run:
+[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
 
-### `npm start`
+### The challenge
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+In this challenge, you'll build a beautiful product page. We'll be putting your JS skills to the test with a lightbox product gallery and cart functionality!
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Screenshot
 
-### `npm test`
+#### Desktop
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![screenshot desktop](src/screenshots/desktop-main-page.png)
+![screenshot desktop](src/screenshots/desktop-cart-fill.png)
 
-### `npm run build`
+#### Mobile
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![screenshot mobile](src/screenshots/mobile-main-page.png)
+![screenshot mobile](src/screenshots/mobile-cart-fill.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Links
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [Github repo](https://github.com/edgarfb/ecomerce-product-page-main-)
+- [Live Site URL](https://ecomerce-product-page-main-git-main-edgarfb.vercel.app/)
 
-### `npm run eject`
+## My process
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Built with
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- React
+- Redux
+- Styled Componets
+- Mobile-first workflow
+- Deploy on [vercel](https://vercel.com/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### What I learned
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+It's been a long time from the last challenge, I have been learning new stuff and I tryed to apllyed all of that in this new challenge.
+I continue working to get better with [React](https://reactjs.org/) and this time I used [Redux](https://redux.js.org/) to manage the app's state, I used Git and Github from the beginig to the end, also I have been explored the [Styled Component Library](https://styled-components.com/)(I really liked it).
+My next move is it learn more about testing, like [Jest](https://jestjs.io/) and [Testing Library](https://testing-library.com/). See you the next time.
 
-## Learn More
+### Continued development
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Next I want to explore more about:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Jest
+- Testing Library
+- Nextjs.
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Useful resources
 
-### Analyzing the Bundle Size
+- [React](https://reactjs.org/)
+- [create-react-app](https://create-react-app.dev/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Author
 
-### Making a Progressive Web App
+- [Website](https://www.edgarbritez.com/)
+- [Github](https://github.com/edgarfb)
+- [Frontend Mentor](https://www.frontendmentor.io/profile/edgarfb)
+- [Twitter](https://www.twitter.com/edgarfb_ok)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Acknowledgments
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I really enjoined and I learned a lot about layout whith the content of [Kevin Powell](https://www.kevinpowell.co/).\
+You guys can enroll on [this course](https://courses.kevinpowell.co/conquering-responsive-layouts) totaly free.
